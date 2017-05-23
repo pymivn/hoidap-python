@@ -1,0 +1,29 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "H\u1ecfi \u0111\u00e1p Python\n\n\nT\u1ed5ng h\u1ee3p nh\u1eefng c\u00e2u h\u1ecfi k\u1ef9 thu\u1eadt hay \u0111\u01b0\u1ee3c h\u1ecfi v\u00e0 tr\u1ea3 l\u1eddi t\u1ea1i l\u1edbp h\u1ecdc Python\nhttps://pymi.vn\n\n\nT\u1ea1i sao khi c\u00f3 m\u1ed9t list A, sau \u0111\u00f3 g\u00e1n \nB = A\n, r\u1ed3i thay \u0111\u1ed5i A th\u00ec B thay \u0111\u1ed5i theo.\n\n\nA\n v\u00e0 \nB\n l\u00e0 2 c\u00e1i t\u00ean cho c\u00f9ng 1 object. Khi thay \u0111\u1ed5i list A t\u1ee9c l\u00e0 thay \u0111\u1ed5i object m\u00e0 list B c\u0169ng \u0111ang \"bu\u1ed9c\" v\u00e0o (bound).\n\n\nTrong Python3, print('abc') tr\u1ea3 v\u1ec1 (return) g\u00ec?\n\n\nNone\n.\n\n\nT\u1ea1i sao sau \nif\n kh\u00f4ng c\u1ea7n d\u1ea5u \n(\n m\u00e0 len th\u00ec c\u1ea7n? \nlen()\n?\n\n\nlen\n l\u00e0 function (h\u00e0m), \nif\n l\u00e0 statement (c\u00e2u l\u1ec7nh) t\u01b0\u01a1ng t\u1ef1 v\u1edbi for/while/with/try.",
+            "title": "Home"
+        },
+        {
+            "location": "/#hoi-ap-python",
+            "text": "T\u1ed5ng h\u1ee3p nh\u1eefng c\u00e2u h\u1ecfi k\u1ef9 thu\u1eadt hay \u0111\u01b0\u1ee3c h\u1ecfi v\u00e0 tr\u1ea3 l\u1eddi t\u1ea1i l\u1edbp h\u1ecdc Python\nhttps://pymi.vn",
+            "title": "H\u1ecfi \u0111\u00e1p Python"
+        },
+        {
+            "location": "/#tai-sao-khi-co-mot-list-a-sau-o-gan-b-a-roi-thay-oi-a-thi-b-thay-oi-theo",
+            "text": "A  v\u00e0  B  l\u00e0 2 c\u00e1i t\u00ean cho c\u00f9ng 1 object. Khi thay \u0111\u1ed5i list A t\u1ee9c l\u00e0 thay \u0111\u1ed5i object m\u00e0 list B c\u0169ng \u0111ang \"bu\u1ed9c\" v\u00e0o (bound).",
+            "title": "T\u1ea1i sao khi c\u00f3 m\u1ed9t list A, sau \u0111\u00f3 g\u00e1n B = A, r\u1ed3i thay \u0111\u1ed5i A th\u00ec B thay \u0111\u1ed5i theo."
+        },
+        {
+            "location": "/#trong-python3-printabc-tra-ve-return-gi",
+            "text": "None .",
+            "title": "Trong Python3, print('abc') tr\u1ea3 v\u1ec1 (return) g\u00ec?"
+        },
+        {
+            "location": "/#tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len",
+            "text": "len  l\u00e0 function (h\u00e0m),  if  l\u00e0 statement (c\u00e2u l\u1ec7nh) t\u01b0\u01a1ng t\u1ef1 v\u1edbi for/while/with/try.",
+            "title": "T\u1ea1i sao sau if kh\u00f4ng c\u1ea7n d\u1ea5u ( m\u00e0 len th\u00ec c\u1ea7n? len()?"
+        }
+    ]
+}
