@@ -64,8 +64,31 @@
 https://pymi.vn</p>
 <h2 id="tai-sao-khi-co-mot-list-a-sau-o-gan-b-a-roi-thay-oi-a-thi-b-thay-oi-theo">Tại sao khi có một list A, sau đó gán <code>B = A</code>, rồi thay đổi A thì B thay đổi theo.</h2>
 <p><code>A</code> và <code>B</code> là 2 cái tên cho cùng 1 object. Khi thay đổi list A tức là thay đổi object mà list B cũng đang "buộc" vào (bound).</p>
+<pre><code>In [1]: A = [1,2,3,4]
+
+In [2]: B = A
+
+In [3]: A[0] = 3
+
+In [4]: print(B)
+[3, 2, 3, 4]
+
+In [5]: id(A) == id(B)
+Out[5]: True
+
+In [6]: A is B
+Out[6]: True
+</code></pre>
+
 <h2 id="trong-python3-printabc-tra-ve-return-gi">Trong Python3, print('abc') trả về (return) gì?</h2>
 <p><code>None</code>.</p>
+<pre><code>In [8]: out = print(&quot;Hello PYMI.VN&quot;)
+Hello PYMI.VN
+
+In [9]: out is None
+Out[9]: True
+</code></pre>
+
 <h2 id="tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len">Tại sao sau <code>if</code> không cần dấu <code>(</code> mà len thì cần? <code>len()</code>?</h2>
 <p><code>len</code> là function (hàm), <code>if</code> là statement (câu lệnh) tương tự với for/while/with/try.</p></div>
         </div>
@@ -106,5 +129,5 @@ https://pymi.vn</p>
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-05-23 16:17:29
+Build Date UTC : 2017-05-24 01:00:46
 -->
