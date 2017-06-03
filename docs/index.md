@@ -1,7 +1,7 @@
 # Hỏi đáp Python
 
-Tổng hợp những câu hỏi kỹ thuật hay được hỏi và trả lời tại lớp học Python
-https://pymi.vn
+Tổng hợp những câu hỏi kỹ thuật hay được hỏi và trả lời tại lớp [học Python PyMIvn](https://pymi.vn),
+cùng các câu hỏi phỏng vấn Python thường gặp 😏
 
 ## Tại sao khi có một list A, sau đó gán `Z = A`, rồi thay đổi A thì Z thay đổi theo.
 
