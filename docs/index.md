@@ -24,6 +24,8 @@ In [6]: A is B
 Out[6]: True
 ```
 
+Xem chi tiết [cách name và binding hoạt động ở đây](https://pymi.vn/blog/call-by/#binding).
+
 ## Trong Python3, print('abc') trả về (return) gì?
 
 `None`.
@@ -60,11 +62,11 @@ In [7]: int(1e69)
 Out[7]: 1000000000000000072531436381529235126158374409646521955518210155479040
 ```
 
-## Các argument được pass dùng tham chiếu hay tham trị?
+## Các argument được pass vào function dùng tham chiếu hay tham trị?
 
 Python dùng [call-by-object-reference](http://pymi.vn/blog/call-by/)
 
-## Hãy mô tả function overloading trong Python
+## Mô tả function overloading trong Python
 Python không phải là C++! Python không cần và không có khái niệm
 overloading.
 Python là dynamic typing, theo style
@@ -74,4 +76,5 @@ khi cần gọi function với các argument khác nhau/số lượng tuỳ ý, 
 
 ## Mô tả interface và abstract trong Python
 Python không phải là Java! Python không có khái niệm interface, hay abstract
-class như Java.
+class như Java. Nếu muốn, lập trình viên có thể sử dụng các thư viện cung cấp
+các tính năng này như [ABC](https://www.python.org/dev/peps/pep-3119/).
