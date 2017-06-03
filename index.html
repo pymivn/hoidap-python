@@ -55,6 +55,11 @@
             <li><a href="#tai-sao-khi-co-mot-list-a-sau-o-gan-b-a-roi-thay-oi-a-thi-b-thay-oi-theo">Tại sao khi có một list A, sau đó gán B = A, rồi thay đổi A thì B thay đổi theo.</a></li>
             <li><a href="#trong-python3-printabc-tra-ve-return-gi">Trong Python3, print('abc') trả về (return) gì?</a></li>
             <li><a href="#tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len">Tại sao sau if không cần dấu ( mà len thì cần? len()?</a></li>
+            <li><a href="#tai-sao-01-01-01-03">Tại sao 0.1 + 0.1 + 0.1 != 0.3?</a></li>
+            <li><a href="#tai-sao-1e2-102-ma-1e69-1069">Tại sao 1e2 == 10**2 mà 1e69 != 10**69?</a></li>
+            <li><a href="#cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri">Các argument được pass vào function dùng tham chiếu hay tham trị?</a></li>
+            <li><a href="#mo-ta-function-overloading-trong-python">Mô tả function overloading trong Python</a></li>
+            <li><a href="#mo-ta-interface-va-abstract-trong-python">Mô tả interface và abstract trong Python</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -80,6 +85,7 @@ In [6]: A is B
 Out[6]: True
 </code></pre>
 
+<p>Xem chi tiết <a href="https://pymi.vn/blog/call-by/#binding">cách name và binding hoạt động ở đây</a>.</p>
 <h2 id="trong-python3-printabc-tra-ve-return-gi">Trong Python3, print('abc') trả về (return) gì?</h2>
 <p><code>None</code>.</p>
 <pre><code>In [8]: out = print(&quot;Hello PYMI.VN&quot;)
@@ -90,7 +96,35 @@ Out[9]: True
 </code></pre>
 
 <h2 id="tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len">Tại sao sau <code>if</code> không cần dấu <code>(</code> mà len thì cần? <code>len()</code>?</h2>
-<p><code>len</code> là function (hàm), <code>if</code> là statement (câu lệnh) tương tự với for/while/with/try.</p></div>
+<p><code>len</code> là function (hàm), <code>if</code> là statement (câu lệnh) tương tự với for/while/with/try.</p>
+<h2 id="tai-sao-01-01-01-03">Tại sao <code>0.1 + 0.1 + 0.1 != 0.3</code>?</h2>
+<p>Kiểu dữ liệu float (0.1, 0.3) là một dạng biểu diễn gần đúng của giá trị
+số phức (có giá trị nó biểu diễn chính xác được, có giá trị thì không).
+Khi ba số 0.1 (biểu diễn gần đúng) cộng lại với nhau,
+giá trị nó tạo ra sẽ khác với 0.3 (biểu diễn chính xác).
+Xem chi tiết ở <a href="http://pymi.vn/blog/why-not-float/">đây</a></p>
+<h2 id="tai-sao-1e2-102-ma-1e69-1069">Tại sao <code>1e2 == 10**2</code> mà <code>1e69 != 10**69</code>?</h2>
+<p>Float là kiểu dữ liệu <a href="http://pymi.vn/blog/why-not-float/">biểu diễn gần đúng</a>:</p>
+<pre><code>In [6]: 1e69 == 10**69
+Out[6]: False
+
+In [7]: int(1e69)
+Out[7]: 1000000000000000072531436381529235126158374409646521955518210155479040
+</code></pre>
+
+<h2 id="cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri">Các argument được pass vào function dùng tham chiếu hay tham trị?</h2>
+<p>Python dùng <a href="http://pymi.vn/blog/call-by/">call-by-object-reference</a></p>
+<h2 id="mo-ta-function-overloading-trong-python">Mô tả function overloading trong Python</h2>
+<p>Python không phải là C++! Python không cần và không có khái niệm
+overloading.
+Python là dynamic typing, theo style
+<a href="https://docs.python.org/3/glossary.html#term-duck-typing">duck-typing</a>,
+khi cần gọi function với các argument khác nhau/số lượng tuỳ ý, sử dụng
+<a href="https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists"><code>*args, **kwargs</code></a></p>
+<h2 id="mo-ta-interface-va-abstract-trong-python">Mô tả interface và abstract trong Python</h2>
+<p>Python không phải là Java! Python không có khái niệm interface, hay abstract
+class như Java. Nếu muốn, lập trình viên có thể sử dụng các thư viện cung cấp
+các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">ABC</a>.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -129,5 +163,5 @@ Out[9]: True
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-05-24 01:00:46
+Build Date UTC : 2017-06-03 04:52:44
 -->
