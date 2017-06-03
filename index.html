@@ -52,11 +52,12 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#hoi-ap-python">Hỏi đáp Python</a></li>
-            <li><a href="#tai-sao-khi-co-mot-list-a-sau-o-gan-b-a-roi-thay-oi-a-thi-b-thay-oi-theo">Tại sao khi có một list A, sau đó gán B = A, rồi thay đổi A thì B thay đổi theo.</a></li>
+            <li><a href="#tai-sao-khi-co-mot-list-a-sau-o-gan-z-a-roi-thay-oi-a-thi-z-thay-oi-theo">Tại sao khi có một list A, sau đó gán Z = A, rồi thay đổi A thì Z thay đổi theo.</a></li>
             <li><a href="#trong-python3-printabc-tra-ve-return-gi">Trong Python3, print('abc') trả về (return) gì?</a></li>
             <li><a href="#tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len">Tại sao sau if không cần dấu ( mà len thì cần? len()?</a></li>
             <li><a href="#tai-sao-01-01-01-03">Tại sao 0.1 + 0.1 + 0.1 != 0.3?</a></li>
             <li><a href="#tai-sao-1e2-102-ma-1e69-1069">Tại sao 1e2 == 10**2 mà 1e69 != 10**69?</a></li>
+            <li><a href="#tai-sao-trong-mot-lan-chay-id-5-khong-oi-con-id-6-thi-lai-thay-oi">Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?</a></li>
             <li><a href="#cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri">Các argument được pass vào function dùng tham chiếu hay tham trị?</a></li>
             <li><a href="#mo-ta-function-overloading-trong-python">Mô tả function overloading trong Python</a></li>
             <li><a href="#mo-ta-interface-va-abstract-trong-python">Mô tả interface và abstract trong Python</a></li>
@@ -67,21 +68,21 @@
 <h1 id="hoi-ap-python">Hỏi đáp Python</h1>
 <p>Tổng hợp những câu hỏi kỹ thuật hay được hỏi và trả lời tại lớp học Python
 https://pymi.vn</p>
-<h2 id="tai-sao-khi-co-mot-list-a-sau-o-gan-b-a-roi-thay-oi-a-thi-b-thay-oi-theo">Tại sao khi có một list A, sau đó gán <code>B = A</code>, rồi thay đổi A thì B thay đổi theo.</h2>
-<p><code>A</code> và <code>B</code> là 2 cái tên cho cùng 1 object. Khi thay đổi list A tức là thay đổi object mà list B cũng đang "buộc" vào (bound).</p>
+<h2 id="tai-sao-khi-co-mot-list-a-sau-o-gan-z-a-roi-thay-oi-a-thi-z-thay-oi-theo">Tại sao khi có một list A, sau đó gán <code>Z = A</code>, rồi thay đổi A thì Z thay đổi theo.</h2>
+<p><code>A</code> và <code>Z</code> là 2 cái tên cho cùng 1 object. Khi thay đổi list A tức là thay đổi object mà list Z cũng đang "buộc" vào (bound).</p>
 <pre><code>In [1]: A = [1,2,3,4]
 
-In [2]: B = A
+In [2]: Z = A
 
 In [3]: A[0] = 3
 
-In [4]: print(B)
+In [4]: print(Z)
 [3, 2, 3, 4]
 
-In [5]: id(A) == id(B)
+In [5]: id(A) == id(Z)
 Out[5]: True
 
-In [6]: A is B
+In [6]: A is Z
 Out[6]: True
 </code></pre>
 
@@ -110,6 +111,26 @@ Out[6]: False
 
 In [7]: int(1e69)
 Out[7]: 1000000000000000072531436381529235126158374409646521955518210155479040
+</code></pre>
+
+<h2 id="tai-sao-trong-mot-lan-chay-id-5-khong-oi-con-id-6-thi-lai-thay-oi">Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?</h2>
+<p><a href="https://pymi.vn/tutorial/python-la-gi/">CPython</a> lưu sẵn (cache) giá trị các
+số từ -5 đến 256. Vì vậy Python sẽ không tạo
+ra một object mới mỗi lần dùng số trong khoảng này. Đây là tính chất có được
+do cách tạo ra bản CPython,
+không phải một tính năng của Python (không đúng với Jython, PyPy...).
+Khi so sánh các số, hãy dùng <code>==</code> chứ đừng dùng <code>is</code>.</p>
+<pre><code class="python">n [3]: id(-5)
+Out[3]: 4546887872
+
+In [4]: id(-5)
+Out[4]: 4546887872
+
+In [5]: id(-6)
+Out[5]: 4569471920
+
+In [6]: id(-6)
+Out[6]: 4569469616
 </code></pre>
 
 <h2 id="cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri">Các argument được pass vào function dùng tham chiếu hay tham trị?</h2>
@@ -163,5 +184,5 @@ các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">A
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-06-03 04:52:44
+Build Date UTC : 2017-06-03 05:31:33
 -->
