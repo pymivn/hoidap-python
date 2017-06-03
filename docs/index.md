@@ -63,8 +63,9 @@ Out[7]: 1000000000000000072531436381529235126158374409646521955518210155479040
 ```
 
 ## Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?
-[CPython](https://pymi.vn/tutorial/python-la-gi/) lưu sẵn (cache) giá trị các
-số từ -5 đến 256. Vì vậy Python sẽ không tạo
+[CPython](https://pymi.vn/tutorial/python-la-gi/) lưu sẵn [(cache) giá trị các
+số từ -5 đến 256](https://docs.python.org/3/c-api/long.html#c.PyLong_FromLong).
+Vì vậy Python sẽ không tạo
 ra một object mới mỗi lần dùng số trong khoảng này. Đây là tính chất có được
 do cách tạo ra bản CPython,
 không phải một tính năng của Python (không đúng với Jython, PyPy...).
