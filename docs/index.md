@@ -62,6 +62,28 @@ In [7]: int(1e69)
 Out[7]: 1000000000000000072531436381529235126158374409646521955518210155479040
 ```
 
+## Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?
+[CPython](https://pymi.vn/tutorial/python-la-gi/) lưu sẵn (cache) giá trị các
+số từ -5 đến 256. Vì vậy Python sẽ không tạo
+ra một object mới mỗi lần dùng số trong khoảng này. Đây là tính chất có được
+do cách tạo ra bản CPython,
+không phải một tính năng của Python (không đúng với Jython, PyPy...).
+Khi so sánh các số, hãy dùng `==` chứ đừng dùng `is`.
+
+```python
+n [3]: id(-5)
+Out[3]: 4546887872
+
+In [4]: id(-5)
+Out[4]: 4546887872
+
+In [5]: id(-6)
+Out[5]: 4569471920
+
+In [6]: id(-6)
+Out[6]: 4569469616
+```
+
 ## Các argument được pass vào function dùng tham chiếu hay tham trị?
 
 Python dùng [call-by-object-reference](http://pymi.vn/blog/call-by/)
