@@ -114,8 +114,9 @@ Out[7]: 1000000000000000072531436381529235126158374409646521955518210155479040
 </code></pre>
 
 <h2 id="tai-sao-trong-mot-lan-chay-id-5-khong-oi-con-id-6-thi-lai-thay-oi">Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?</h2>
-<p><a href="https://pymi.vn/tutorial/python-la-gi/">CPython</a> lưu sẵn (cache) giá trị các
-số từ -5 đến 256. Vì vậy Python sẽ không tạo
+<p><a href="https://pymi.vn/tutorial/python-la-gi/">CPython</a> lưu sẵn <a href="https://docs.python.org/3/c-api/long.html#c.PyLong_FromLong">(cache) giá trị các
+số từ -5 đến 256</a>.
+Vì vậy Python sẽ không tạo
 ra một object mới mỗi lần dùng số trong khoảng này. Đây là tính chất có được
 do cách tạo ra bản CPython,
 không phải một tính năng của Python (không đúng với Jython, PyPy...).
@@ -184,5 +185,5 @@ các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">A
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-06-03 05:31:33
+Build Date UTC : 2017-06-03 05:35:58
 -->
