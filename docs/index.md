@@ -45,7 +45,7 @@ Out[9]: True
 ## Tại sao `0.1 + 0.1 + 0.1 != 0.3`?
 
 Kiểu dữ liệu float (0.1, 0.3) là một dạng biểu diễn gần đúng của giá trị
-số phức (có giá trị nó biểu diễn chính xác được, có giá trị thì không).
+số thực (có giá trị nó biểu diễn chính xác được, có giá trị thì không).
 Khi ba số 0.1 (biểu diễn gần đúng) cộng lại với nhau,
 giá trị nó tạo ra sẽ khác với 0.3 (biểu diễn chính xác).
 Xem chi tiết ở [đây](http://pymi.vn/blog/why-not-float/)
