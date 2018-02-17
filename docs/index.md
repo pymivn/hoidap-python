@@ -85,6 +85,25 @@ In [6]: id(-6)
 Out[6]: 4569469616
 ```
 
+## Các key trong dict có thứ tự thế nào?
+Với Python2.7 -> Python3.5. Nếu ta viết code sau thì kết quả là gì
+
+```python
+for k in {1: 1, 2: 2, 1000: 1000, 8:8}:
+     print(k)
+```
+
+Các key của dictionary không có thứ tự cụ thể. Nhưng không phải là ngẫu nhiên (tức đoạn code trên, nếu trên 1 máy tính, chạy 100 lần đều ra kết quả như nhau - nhưng trên máy khác có thể khác).
+
+Bonus: Python3.6 sẽ ghi nhớ các key theo thứ tự chúng được add vào dictionary.
+
+## Một tuple chứa 2 phần tử là 2 list có thể là key của dict không?
+Tuple vốn là "immutable", đã tạo ra thì không thay đổi được, nhưng phần tử của nó là list, có thể thay đổi được -> tuple này trở thành mutable theo ý nghĩa: ta thay đổi được tuple đó chưa gì (mặc dù ở một câu sâu hơn, không phải thay đổi trực tiếp). Điều này khiến giá trị của tuple không cố định -> không lấy được "hash" -> không làm key của dict được.
+
+## Tạo tuple chứa 1 phần tử là string 'Python'
+
+Không phải là `('Python')`, mà phải có dấu phẩy sau nó để Python hiểu đây là tuple `('Python',)`
+
 ## Các argument được pass vào function dùng tham chiếu hay tham trị?
 
 Python dùng [call-by-object-reference](http://pymi.vn/blog/call-by/)
