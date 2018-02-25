@@ -84,6 +84,7 @@
             <li><a href="#tai-sao-01-01-01-03">Tại sao 0.1 + 0.1 + 0.1 != 0.3?</a></li>
             <li><a href="#tai-sao-1e2-102-ma-1e69-1069">Tại sao 1e2 == 10**2 mà 1e69 != 10**69?</a></li>
             <li><a href="#tai-sao-trong-mot-lan-chay-id-5-khong-oi-con-id-6-thi-lai-thay-oi">Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?</a></li>
+            <li><a href="#dong-code-sau-tra-ve-ket-qua-la-gi-23-4append5">Dòng code sau trả về kết quả là gì: [2,3] + [4].append(5)  ?</a></li>
             <li><a href="#cac-key-trong-dict-co-thu-tu-the-nao">Các key trong dict có thứ tự thế nào?</a></li>
             <li><a href="#mot-tuple-chua-2-phan-tu-la-2-list-co-the-la-key-cua-dict-khong">Một tuple chứa 2 phần tử là 2 list có thể là key của dict không?</a></li>
             <li><a href="#tao-tuple-chua-1-phan-tu-la-string-python">Tạo tuple chứa 1 phần tử là string 'Python'</a></li>
@@ -163,6 +164,8 @@ In [6]: id(-6)
 Out[6]: 4569469616
 </code></pre>
 
+<h2 id="dong-code-sau-tra-ve-ket-qua-la-gi-23-4append5">Dòng code sau trả về kết quả là gì: [2,3] + [4].append(5)  ?</h2>
+<p>Không trả về gì cả. Xảy ra một exception, do list.append trả về None, list + None xảy ra exception.</p>
 <h2 id="cac-key-trong-dict-co-thu-tu-the-nao">Các key trong dict có thứ tự thế nào?</h2>
 <p>Với Python2.7 -&gt; Python3.5. Nếu ta viết code sau thì kết quả là gì</p>
 <pre><code class="python">for k in {1: 1, 2: 2, 1000: 1000, 8:8}:
@@ -269,5 +272,5 @@ các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">A
 
 <!--
 MkDocs version : 0.17.1
-Build Date UTC : 2018-02-17 04:35:03
+Build Date UTC : 2018-02-25 16:02:43
 -->
