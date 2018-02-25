@@ -84,6 +84,9 @@ Out[5]: 4569471920
 In [6]: id(-6)
 Out[6]: 4569469616
 ```
+## Dòng code sau trả về kết quả là gì: [2,3] + [4].append(5)  ?
+
+Không trả về gì cả. Xảy ra một exception, do list.append trả về None, list + None xảy ra exception.
 
 ## Các key trong dict có thứ tự thế nào?
 Với Python2.7 -> Python3.5. Nếu ta viết code sau thì kết quả là gì
