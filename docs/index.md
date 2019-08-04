@@ -111,6 +111,13 @@ Không phải là `('Python')`, mà phải có dấu phẩy sau nó để Python
 
 Python dùng [call-by-object-reference](http://pymi.vn/blog/call-by/)
 
+## Hãy kể tên các design patterns bạn biết?
+Đây là Python, không phải Java, ở đây chúng tôi không cần những thứ đó.
+[Do OO design principles apply to Python?](https://stackoverflow.com/questions/546479/do-oo-design-principles-apply-to-python)
+
+## SOLID là gì và bạn có giỏi về OOP không?
+[![Stop writing class](https://img.youtube.com/vi/o9pEzgHorH0/0.jpg)](https://www.youtube.com/watch?v=o9pEzgHorH0)
+
 ## Mô tả function overloading trong Python
 Python không phải là C++! Python không cần và không có khái niệm
 overloading.
