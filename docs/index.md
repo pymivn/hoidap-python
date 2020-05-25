@@ -98,7 +98,7 @@ for k in {1: 1, 2: 2, 1000: 1000, 8:8}:
 
 Các key của dictionary không có thứ tự cụ thể. Nhưng không phải là ngẫu nhiên (tức đoạn code trên, nếu trên 1 máy tính, chạy 100 lần đều ra kết quả như nhau - nhưng trên máy khác có thể khác).
 
-Bonus: Python3.6 sẽ ghi nhớ các key theo thứ tự chúng được add vào dictionary.
+Bonus: Python3.6+ sẽ ghi nhớ các key theo thứ tự chúng được add vào dictionary.
 
 ## Một tuple chứa 2 phần tử là 2 list có thể là key của dict không?
 Tuple vốn là "immutable", đã tạo ra thì không thay đổi được, nhưng phần tử của nó là list, có thể thay đổi được -> tuple này trở thành mutable theo ý nghĩa: ta thay đổi được tuple đó chưa gì (mặc dù ở một câu sâu hơn, không phải thay đổi trực tiếp). Điều này khiến giá trị của tuple không cố định -> không lấy được "hash" -> không làm key của dict được.
@@ -110,6 +110,24 @@ Không phải là `('Python')`, mà phải có dấu phẩy sau nó để Python
 ## Các argument được pass vào function dùng tham chiếu hay tham trị?
 
 Python dùng [call-by-object-reference](http://pymi.vn/blog/call-by/)
+
+## Python quản lý memory thế nào?
+Tự động.
+
+Đây không phải một câu hỏi cần thiết để khi tuyển dụng người mới code Python
+dưới 3 năm. Nó giống như việc hỏi người lái xe số tự động đạp côn như thế nào -
+khi mọi thứ đã tự động hóa tốt rồi thì thậm chí có thể quên nó đi.
+Một câu hỏi hay hơn có thể dùng "làm gì để debug một chương trình khi memory
+nó dùng tăng lên mỗi ngày?" (biết khái niệm memleak, biết profile memory,
+có thể cần động đến Garbage Collector (GC) thông qua stdlib [`import
+gc`](https://docs.python.org/3/library/gc.html#module-gc)).
+
+Chi tiết trong [Python FAQ/design](https://docs.python.org/3/faq/design.html#how-does-python-manage-memory)
+
+Đọc cho vui:
+
+- [Instagram tắt GC đi](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
+- [Garbage collection](https://docs.python.org/3/glossary.html?highlight=garbage#term-garbage-collection)
 
 ## Hãy kể tên các design patterns bạn biết?
 Đây là Python, không phải Java, ở đây chúng tôi không cần những thứ đó.
