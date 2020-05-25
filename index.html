@@ -9,64 +9,51 @@
         
         <link rel="shortcut icon" href="img/favicon.ico">
         <title>Hỏi đáp Python PyMi.vn</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body class="homepage">
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href=".">Hỏi đáp Python PyMi.vn</a>
-                </div>
+                <a class="navbar-brand" href=".">Hỏi đáp Python PyMi.vn</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">Hỏi đáp Python</a>
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Hỏi đáp Python</a>
                             </li>
-                            <li >
-                                <a href="interview_tests/">Interview tests</a>
+                            <li class="navitem">
+                                <a href="interview_tests/" class="nav-link">Interview tests</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="interview_tests/">
+                            <li class="nav-item">
+                                <a rel="next" href="interview_tests/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -76,27 +63,90 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#hoi-ap-python">Hỏi đáp Python</a></li>
-            <li><a href="#tai-sao-khi-co-mot-list-a-sau-o-gan-z-a-roi-thay-oi-a-thi-z-thay-oi-theo">Tại sao khi có một list A, sau đó gán Z = A, rồi thay đổi A thì Z thay đổi theo.</a></li>
-            <li><a href="#trong-python3-printabc-tra-ve-return-gi">Trong Python3, print('abc') trả về (return) gì?</a></li>
-            <li><a href="#tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len">Tại sao sau if không cần dấu ( mà len thì cần? len()?</a></li>
-            <li><a href="#tai-sao-01-01-01-03">Tại sao 0.1 + 0.1 + 0.1 != 0.3?</a></li>
-            <li><a href="#tai-sao-1e2-102-ma-1e69-1069">Tại sao 1e2 == 10**2 mà 1e69 != 10**69?</a></li>
-            <li><a href="#tai-sao-trong-mot-lan-chay-id-5-khong-oi-con-id-6-thi-lai-thay-oi">Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?</a></li>
-            <li><a href="#dong-code-sau-tra-ve-ket-qua-la-gi-23-4append5">Dòng code sau trả về kết quả là gì: [2,3] + [4].append(5)  ?</a></li>
-            <li><a href="#cac-key-trong-dict-co-thu-tu-the-nao">Các key trong dict có thứ tự thế nào?</a></li>
-            <li><a href="#mot-tuple-chua-2-phan-tu-la-2-list-co-the-la-key-cua-dict-khong">Một tuple chứa 2 phần tử là 2 list có thể là key của dict không?</a></li>
-            <li><a href="#tao-tuple-chua-1-phan-tu-la-string-python">Tạo tuple chứa 1 phần tử là string 'Python'</a></li>
-            <li><a href="#cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri">Các argument được pass vào function dùng tham chiếu hay tham trị?</a></li>
-            <li><a href="#hay-ke-ten-cac-design-patterns-ban-biet">Hãy kể tên các design patterns bạn biết?</a></li>
-            <li><a href="#solid-la-gi-va-ban-co-gioi-ve-oop-khong">SOLID là gì và bạn có giỏi về OOP không?</a></li>
-            <li><a href="#mo-ta-function-overloading-trong-python">Mô tả function overloading trong Python</a></li>
-            <li><a href="#mo-ta-interface-va-abstract-trong-python">Mô tả interface và abstract trong Python</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#hoi-ap-python" class="nav-link">Hỏi đáp Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tai-sao-khi-co-mot-list-a-sau-o-gan-z-a-roi-thay-oi-a-thi-z-thay-oi-theo" class="nav-link">Tại sao khi có một list A, sau đó gán Z = A, rồi thay đổi A thì Z thay đổi theo.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trong-python3-printabc-tra-ve-return-gi" class="nav-link">Trong Python3, print('abc') trả về (return) gì?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tai-sao-sau-if-khong-can-dau-ma-len-thi-can-len" class="nav-link">Tại sao sau if không cần dấu ( mà len thì cần? len()?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tai-sao-01-01-01-03" class="nav-link">Tại sao 0.1 + 0.1 + 0.1 != 0.3?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tai-sao-1e2-102-ma-1e69-1069" class="nav-link">Tại sao 1e2 == 10**2 mà 1e69 != 10**69?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tai-sao-trong-mot-lan-chay-id-5-khong-oi-con-id-6-thi-lai-thay-oi" class="nav-link">Tại sao trong một lần chạy id(-5) không đổi còn id(-6) thì lại thay đổi?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dong-code-sau-tra-ve-ket-qua-la-gi-23-4append5" class="nav-link">Dòng code sau trả về kết quả là gì: [2,3] + [4].append(5)  ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cac-key-trong-dict-co-thu-tu-the-nao" class="nav-link">Các key trong dict có thứ tự thế nào?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mot-tuple-chua-2-phan-tu-la-2-list-co-the-la-key-cua-dict-khong" class="nav-link">Một tuple chứa 2 phần tử là 2 list có thể là key của dict không?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tao-tuple-chua-1-phan-tu-la-string-python" class="nav-link">Tạo tuple chứa 1 phần tử là string 'Python'</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri" class="nav-link">Các argument được pass vào function dùng tham chiếu hay tham trị?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#python-quan-ly-memory-the-nao" class="nav-link">Python quản lý memory thế nào?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hay-ke-ten-cac-design-patterns-ban-biet" class="nav-link">Hãy kể tên các design patterns bạn biết?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#solid-la-gi-va-ban-co-gioi-ve-oop-khong" class="nav-link">SOLID là gì và bạn có giỏi về OOP không?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mo-ta-function-overloading-trong-python" class="nav-link">Mô tả function overloading trong Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mo-ta-interface-va-abstract-trong-python" class="nav-link">Mô tả interface và abstract trong Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="hoi-ap-python">Hỏi đáp Python</h1>
 <p>Tổng hợp những câu hỏi kỹ thuật hay được hỏi và trả lời tại lớp <a href="https://pymi.vn">học Python PyMIvn</a>,
@@ -176,13 +226,28 @@ Out[6]: 4569469616
 </code></pre>
 
 <p>Các key của dictionary không có thứ tự cụ thể. Nhưng không phải là ngẫu nhiên (tức đoạn code trên, nếu trên 1 máy tính, chạy 100 lần đều ra kết quả như nhau - nhưng trên máy khác có thể khác).</p>
-<p>Bonus: Python3.6 sẽ ghi nhớ các key theo thứ tự chúng được add vào dictionary.</p>
+<p>Bonus: Python3.6+ sẽ ghi nhớ các key theo thứ tự chúng được add vào dictionary.</p>
 <h2 id="mot-tuple-chua-2-phan-tu-la-2-list-co-the-la-key-cua-dict-khong">Một tuple chứa 2 phần tử là 2 list có thể là key của dict không?</h2>
 <p>Tuple vốn là "immutable", đã tạo ra thì không thay đổi được, nhưng phần tử của nó là list, có thể thay đổi được -&gt; tuple này trở thành mutable theo ý nghĩa: ta thay đổi được tuple đó chưa gì (mặc dù ở một câu sâu hơn, không phải thay đổi trực tiếp). Điều này khiến giá trị của tuple không cố định -&gt; không lấy được "hash" -&gt; không làm key của dict được.</p>
 <h2 id="tao-tuple-chua-1-phan-tu-la-string-python">Tạo tuple chứa 1 phần tử là string 'Python'</h2>
 <p>Không phải là <code>('Python')</code>, mà phải có dấu phẩy sau nó để Python hiểu đây là tuple <code>('Python',)</code></p>
 <h2 id="cac-argument-uoc-pass-vao-function-dung-tham-chieu-hay-tham-tri">Các argument được pass vào function dùng tham chiếu hay tham trị?</h2>
 <p>Python dùng <a href="http://pymi.vn/blog/call-by/">call-by-object-reference</a></p>
+<h2 id="python-quan-ly-memory-the-nao">Python quản lý memory thế nào?</h2>
+<p>Tự động.</p>
+<p>Đây không phải một câu hỏi cần thiết để khi tuyển dụng người mới code Python
+dưới 3 năm. Nó giống như việc hỏi người lái xe số tự động đạp côn như thế nào -
+khi mọi thứ đã tự động hóa tốt rồi thì thậm chí có thể quên nó đi.
+Một câu hỏi hay hơn có thể dùng "làm gì để debug một chương trình khi memory
+nó dùng tăng lên mỗi ngày?" (biết khái niệm memleak, biết profile memory,
+có thể cần động đến Garbage Collector (GC) thông qua stdlib <a href="https://docs.python.org/3/library/gc.html#module-gc"><code>import
+gc</code></a>).</p>
+<p>Chi tiết trong <a href="https://docs.python.org/3/faq/design.html#how-does-python-manage-memory">Python FAQ/design</a></p>
+<p>Đọc cho vui:</p>
+<ul>
+<li><a href="https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172">Instagram tắt GC đi</a></li>
+<li><a href="https://docs.python.org/3/glossary.html?highlight=garbage#term-garbage-collection">Garbage collection</a></li>
+</ul>
 <h2 id="hay-ke-ten-cac-design-patterns-ban-biet">Hãy kể tên các design patterns bạn biết?</h2>
 <p>Đây là Python, không phải Java, ở đây chúng tôi không cần những thứ đó.
 <a href="https://stackoverflow.com/questions/546479/do-oo-design-principles-apply-to-python">Do OO design principles apply to Python?</a></p>
@@ -199,6 +264,7 @@ khi cần gọi function với các argument khác nhau/số lượng tuỳ ý, 
 <p>Python không phải là Java! Python không có khái niệm interface, hay abstract
 class như Java. Nếu muốn, lập trình viên có thể sử dụng các thư viện cung cấp
 các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">ABC</a>.</p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -212,19 +278,19 @@ các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">A
         <script src="js/base.js" defer></script>
         <script src="search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
@@ -235,12 +301,12 @@ các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">A
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -280,6 +346,6 @@ các tính năng này như <a href="https://www.python.org/dev/peps/pep-3119/">A
 </html>
 
 <!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-08-04 16:58:05
+MkDocs version : 1.1
+Build Date UTC : 2020-05-25 11:38:41
 -->
